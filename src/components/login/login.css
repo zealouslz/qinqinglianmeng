@@ -1,0 +1,23 @@
+.login {
+  background-image: url(../../image/loginBackgroundColor.jpg);
+  width: 100vw;
+  height: 100vh;
+}
+.login .loginInfo {
+  position: absolute;
+  top: 200px;
+  right: 20vw;
+}
+.login .loginInfo .imgIcon {
+  width: 102px;
+  height: 38px;
+}
+.login .loginInfo .nameSpan {
+  font-family: 'PingFangSC-Medium', 'PingFang SC Medium', 'PingFang SC', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+}
+.login .foot {
+  margin-top: 100px;
+}
