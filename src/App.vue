@@ -16,6 +16,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50
+  color: #2c3e50;
+  background: url(./image/loginBackgroundColor.jpg) no-repeat;
+  margin:0px;
+  background-size:100% 100%;
+  background-attachment:fixed;
+  width: 100%;
+  height: 100%;
 }
 </style>

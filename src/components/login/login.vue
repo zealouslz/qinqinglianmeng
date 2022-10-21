@@ -1,43 +1,41 @@
 <template>
     <div class="login">
-      <div class="loginInfo">
-        <img src="../../image/icon.png" class="imgIcon"/>
+    <div>
+        <img src="../../image/icon.svg" class="imgIcon" />
         <span class="nameSpan">亲清廉盟在线平台</span>
-        <a-tabs default-active-key="1" @change="callback">
-      <a-tab-pane key="1" tab="账户密码登录">
-        <a-form-model ref="loginForm" :model="loginForm" :rules="rules" >
-    <a-form-model-item   prop="username">
-      <a-input v-model="loginForm.username" placeholder="账户" />
-    </a-form-model-item>
-    <a-form-model-item  prop="username">
-      <a-input v-model="loginForm.password" type="password" placeholder="密码" />
-    </a-form-model-item>
-    <a-form-model-item >
-      <a-checkbox @change="onChange" style="float:left">
-    自动登陆
-  </a-checkbox>
-    </a-form-model-item>
-    <a-form-model-item >
-      <a-button type="primary" style="width:100%" @click="submitForm('ruleForm')">
-        登录
-      </a-button>
-    </a-form-model-item>
-  </a-form-model>
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="">
-      </a-tab-pane>
-      <a-tab-pane key="3" tab="">
-      </a-tab-pane>
-    </a-tabs>
-    <div class="foot">
-      <span>帮助
+        <div class="loginInfo">
+            <span class="loginTab">账号密码登录</span>
+            <div class="underline"></div>
+            <div class="loginForm">
+                <a-form-model ref="loginForm" :model="loginForm" :rules="rules">
+                    <a-form-model-item prop="username">
+                        <a-input v-model="loginForm.username"  placeholder="账户" />
+                    </a-form-model-item>
+                    <a-form-model-item prop="username">
+                        <a-input v-model="loginForm.password" type="password" placeholder="密码" />
+                    </a-form-model-item>
+                    <a-form-model-item>
+                        <a-checkbox @change="onChange" class="checkbox">
+                            自动登陆
+                        </a-checkbox>
+                    </a-form-model-item>
+                    <a-form-model-item>
+                        <a-button type="primary" style="width:100%" @click="submitForm('ruleForm')">
+                            登录
+                        </a-button>
+                    </a-form-model-item>
+                </a-form-model>
+                </div>
+            <div class="foot">
+                <span>帮助
 
-隐私
+                    隐私
 
-条款</span>
+                    条款</span>
+            </div>
+        </div>
     </div>
-      </div>
-  </div>
+    </div>
 </template>
 
 <script>
