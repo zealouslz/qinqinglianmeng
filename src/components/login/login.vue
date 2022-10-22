@@ -1,6 +1,5 @@
 <template>
     <div class="login">
-    <div>
         <img src="../../image/icon.svg" class="imgIcon" />
         <div class="nameSpan">亲清廉盟在线平台</div>
         <div class="loginInfo">
@@ -34,12 +33,12 @@
             </div>
         </div>
     </div>
-    </div>
+
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Login',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

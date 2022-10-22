@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="454px" height="44px" viewBox="0 0 454 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 15</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="454" height="44"></rect>
+        <filter x="-2.0%" y="-20.5%" width="104.0%" height="140.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="9" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.00392156863   0 0 0 0 0.439215686   0 0 0 0 0.776470588  0 0 0 0.531349022 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="454" height="44"></rect>
+        <linearGradient x1="100%" y1="98.6092476%" x2="50%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#22D7E3" offset="0%"></stop>
+            <stop stop-color="#22D7E3" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="看板--框架" transform="translate(-30.000000, -118.000000)">
+            <g id="编组-15" transform="translate(30.000000, 118.000000)">
+                <g id="矩形">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <rect stroke-opacity="0.36" stroke="#0077D3" stroke-width="1" stroke-linejoin="square" x="0.5" y="0.5" width="453" height="43"></rect>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="蒙版"></g>
+                <g id="编组-3" mask="url(#mask-4)" opacity="0.049582" stroke="#51B4FF">
+                    <g transform="translate(-9.000000, 4.500000)" id="路径-2">
+                        <line x1="0" y1="0.5" x2="480" y2="0.5"></line>
+                        <line x1="0" y1="10" x2="480" y2="10"></line>
+                        <line x1="0" y1="20" x2="480" y2="20"></line>
+                        <line x1="0" y1="30" x2="480" y2="30"></line>
+                        <line x1="0" y1="5" x2="480" y2="5"></line>
+                        <line x1="0" y1="15" x2="480" y2="15"></line>
+                        <line x1="0" y1="25" x2="480" y2="25"></line>
+                        <line x1="0" y1="35" x2="480" y2="35"></line>
+                    </g>
+                </g>
+                <rect id="矩形" fill="#22D7E3" mask="url(#mask-4)" x="0" y="12" width="2" height="20.952381"></rect>
+                <polygon id="三角形" fill="url(#linearGradient-5)" mask="url(#mask-4)" transform="translate(439.294034, 14.833333) scale(1, -1) translate(-439.294034, -14.833333) " points="454 0.333333333 454 29.3333333 424.588068 29.3333333"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

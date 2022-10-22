@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="48px" viewBox="0 0 1920 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>头部线条</title>
+    <defs>
+        <linearGradient x1="100%" y1="50.0008364%" x2="0%" y2="49.9991636%" id="linearGradient-1">
+            <stop stop-color="#50B3FF" stop-opacity="0.819923241" offset="0%"></stop>
+            <stop stop-color="#014FD0" offset="35.9128008%"></stop>
+            <stop stop-color="#0F60E7" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#0053DF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#0053DF" offset="12.103953%"></stop>
+            <stop stop-color="#C7DCFF" offset="17.773142%"></stop>
+            <stop stop-color="#2870EA" offset="20.8962049%"></stop>
+            <stop stop-color="#0056E6" offset="35.5853564%"></stop>
+            <stop stop-color="#CEE0FF" offset="51.039529%"></stop>
+            <stop stop-color="#105FE3" offset="65.1662383%"></stop>
+            <stop stop-color="#0054E1" offset="78.5426583%"></stop>
+            <stop stop-color="#C7DCFF" offset="81.6905264%"></stop>
+            <stop stop-color="#004ED2" offset="87.5403214%"></stop>
+            <stop stop-color="#0053DF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.3945163%" y1="49.9501011%" x2="0%" y2="49.955%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#6CDAFE" offset="28.9546906%"></stop>
+            <stop stop-color="#83B2FF" offset="57.1802488%"></stop>
+            <stop stop-color="#007DFF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="260" y="18" width="100" height="3"></rect>
+        <filter x="-4.5%" y="-150.0%" width="109.0%" height="400.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.245882955   0 0 0 0 0.953111894   0 0 0 0 1  0 0 0 0.543821535 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="91.3945163%" y1="49.9501011%" x2="0%" y2="49.955%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#6CDAFE" offset="28.9546906%"></stop>
+            <stop stop-color="#83B2FF" offset="57.1802488%"></stop>
+            <stop stop-color="#0078FF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-7" x="1561" y="18" width="100" height="3"></rect>
+        <filter x="-4.5%" y="-150.0%" width="109.0%" height="400.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.245882955   0 0 0 0 0.953111894   0 0 0 0 1  0 0 0 0.543821535 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="看板--框架" transform="translate(0.000000, -42.000000)">
+            <g id="头部线条" transform="translate(0.000000, 43.000000)">
+                <line x1="0.5" y1="19.5" x2="489" y2="20" id="路径-9" stroke="url(#linearGradient-1)"></line>
+                <polyline id="路径-10" stroke="url(#linearGradient-2)" points="392 0 593 0 656 46 1258 46 1318 0 1528 0"></polyline>
+                <polyline id="路径-11" stroke="#22D7E3" stroke-width="2" opacity="0.765128726" points="644 37 656 46 672 46"></polyline>
+                <polyline id="路径-11" stroke="#22D7E3" stroke-width="2" opacity="0.765128726" transform="translate(1256.000000, 41.500000) scale(-1, 1) translate(-1256.000000, -41.500000) " points="1242 37 1254 46 1270 46"></polyline>
+                <g id="矩形">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                </g>
+                <line x1="1431.5" y1="19.5" x2="1920" y2="20" id="路径-9" stroke="url(#linearGradient-1)" transform="translate(1675.500000, 19.500000) scale(-1, 1) translate(-1675.500000, -19.500000) "></line>
+                <g id="矩形" transform="translate(1611.000000, 19.500000) scale(-1, 1) translate(-1611.000000, -19.500000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="url(#linearGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

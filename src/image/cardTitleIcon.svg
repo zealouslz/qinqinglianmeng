@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="30px" viewBox="0 0 28 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>项目推进</title>
+    <defs>
+        <filter x="-14.3%" y="-13.3%" width="128.6%" height="126.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0181742751   0 0 0 0 0.195064605   0 0 0 0 0.327360734  0 0 0 0.550880272 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="9.55005732%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#65CCFF" offset="0%"></stop>
+            <stop stop-color="#2BA1F9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="看板--框架" transform="translate(-39.000000, -124.000000)" fill-rule="nonzero">
+            <g id="编组-4" transform="translate(30.000000, 118.000000)">
+                <g id="项目推进" transform="translate(9.000000, 6.000000)" filter="url(#filter-1)">
+                    <rect id="矩形" fill="#000000" opacity="0" x="3" y="3" width="22" height="23.047619"></rect>
+                    <path d="M22,9.88626735 L14.0127864,6.14285714 L6,9.88626735 L13.9957379,13.6296776 L22,9.88626735 Z M6,12.2773169 L6,14.5238095 L13.9957379,18.2672197 L21.9914758,14.5238095 L21.9914758,12.2773169 L13.9957379,16.0229596 L6,12.2773169 Z M6,16.9148591 L6,19.1613517 L13.9957379,22.9047619 L21.9914758,19.1613517 L21.9914758,16.9148591 L13.9957379,20.6582693 L6,16.9148591 Z" id="形状" fill="url(#linearGradient-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
