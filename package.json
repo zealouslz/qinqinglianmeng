@@ -13,7 +13,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@wangeditor/editor": "^5.1.22",
+    "@wangeditor/editor-for-vue": "^1.0.2",
     "ant-design-vue": "^1.7.8",
+    "babel-polyfill": "^6.26.0",
+    "es6-promise": "^4.2.8",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -62,9 +66,9 @@
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",
-    "vue-loader": "^13.3.0",
+    "vue-loader": "^13.7.3",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "^2.7.13",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
