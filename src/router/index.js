@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/login/login'
-// import bulletinBoard from '@/components/bulletinBoard/bulletinBoard'
 
 Vue.use(Router)
 
