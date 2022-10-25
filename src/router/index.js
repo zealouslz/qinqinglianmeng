@@ -14,6 +14,11 @@ export default new Router({
       path: '/bulletinBoard',
       name: 'bulletinBoard',
       component: () => import('@/components/bulletinBoard/bulletinBoard.vue')
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: () => import('@/components/list/list.vue')
     }
   ]
 })

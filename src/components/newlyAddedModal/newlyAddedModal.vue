@@ -116,41 +116,41 @@
   </div>
 </template>
 <script>
-import editorVue from "../editorVue/editorVue.vue";
+import editorVue from '../editorVue/editorVue.vue'
 export default {
   components: { editorVue },
-  props: ["visible"],
-  data() {
+  props: ['visible'],
+  data () {
     return {
       readOnlys: false,
-      content: `<p style="text-align: center;"><strong>我是标题</strong></p><p style="text-align: center;"><br></p>`,
-    };
+      content: `<p style="text-align: center;"><strong>我是标题</strong></p><p style="text-align: center;"><br></p>`
+    }
   },
   methods: {
-    handleOk(e) {
-      console.log(e);
-      this.$emit("changeVisiable", false);
+    handleOk (e) {
+      console.log(e)
+      this.$emit('changeVisiable', false)
     },
-    handleCancel() {
-      this.$emit("changeVisiable", false);
+    handleCancel () {
+      this.$emit('changeVisiable', false)
     },
-    init() {},
-    hChangeData(editDataHtml) {
+    init () {},
+    hChangeData (editDataHtml) {
       // 获取最新的html数据
-      this.content = editDataHtml;
-      console.log(this.content);
+      this.content = editDataHtml
+      console.log(this.content)
     },
-    hUploadImg(file, insertFn) {
-      console.log(file);
+    hUploadImg (file, insertFn) {
+      console.log(file)
       // 插入图片，调接口返回图片url,通过插入conteng
       let imgUrl =
-        "https://img1.baidu.com/it/u=608404415,1639465523&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800";
-      insertFn(imgUrl);
+        'https://img1.baidu.com/it/u=608404415,1639465523&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800'
+      insertFn(imgUrl)
       // 设置只读
-      this.readOnlys = true;
-    },
-  },
-};
+      this.readOnlys = true
+    }
+  }
+}
 </script>
 <style scoped>
 @import url("./newlyAddedModal.css");

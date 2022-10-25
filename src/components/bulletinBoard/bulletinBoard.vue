@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style=" background: #061733;">
         <headerBar></headerBar>
         <div class="main">
         <a-row>

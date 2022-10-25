@@ -1,0 +1,97 @@
+.title {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 22px;
+  font-size: 16px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 22px;
+}
+.content {
+  height: 88px;
+  font-size: 14px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 22px;
+}
+ /deep/ .ant-modal-header {
+  width: 600px;
+  height: 44px;
+  background: linear-gradient(90deg, #235EA4 0%, #042A5A 100%);
+  border-bottom: 0px solid #e8e8e8;
+}
+ /deep/ .ant-modal-close-x {
+  display: block;
+  width: 56px;
+  height: 50px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 40px;
+  text-align: center;
+  text-transform: none;
+  text-rendering: auto;
+  color: white;
+}
+ /deep/ .ant-modal-content {
+  position: relative;
+  background: rgba(3, 30, 66, 0.8);
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+}
+ /deep/ .ant-modal-body {
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+ /deep/ .ant-modal-footer {
+  border-top: 0px solid #e8e8e8;
+}
+ /deep/ .ant-modal-close {
+  margin-right: 5px;
+}
+ /deep/ .ant-modal-title {
+  width: 116px;
+  height: 20px;
+  font-size: 16px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 18px;
+  text-shadow: 0px 1px 7px rgba(20, 110, 255, 0.83);
+}
+.triangle {
+  width: 29px;
+  height: 29px;
+  background: linear-gradient(45deg, rgba(34, 215, 227, 0) 50%, #22D7E3 100%);
+}
+.rectangle {
+  width: 3px;
+  height: 21px;
+  background: #22D7E3;
+}
+ /deep/ .ant-btn {
+  background: rgba(3, 30, 66, 0.8);
+  border-radius: 2px;
+  border: 1px solid #60B3FF;
+  font-size: 14px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #60B3FF;
+  line-height: 20px;
+}
+ /deep/ .ant-btn-primary {
+  background: #60B3FF;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 20px;
+}

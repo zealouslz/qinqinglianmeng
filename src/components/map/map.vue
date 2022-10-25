@@ -1,67 +1,67 @@
 <template>
     <div class="map">
-    <img src="../../image/map.png" width="843px" height="765px" style="margin-top:-120px"/>
-    <div style="position: absolute;top:75px;left:360px">
+    <img src="../../image/map.png" width="100%" height="720px" style="margin-top:-120px"/>
+    <div style="position: absolute;top:65px;left:43%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">湖州</div>
     </div>
-    <div style="position: absolute;top:85px;left:460px">
+    <div style="position: absolute;top:75px;left:55%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">嘉兴</div>
     </div>
-    <div style="position: absolute;top:170px;left:300px">
+    <div style="position: absolute;top:160px;left:38%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">杭州</div>
     </div>
-    <div style="position: absolute;top:190px;left:440px">
+    <div style="position: absolute;top:180px;left:54%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">绍兴</div>
     </div>
-    <div style="position: absolute;top:190px;left:550px">
+    <div style="position: absolute;top:180px;left:65%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">宁波</div>
     </div>
-    <div style="position: absolute;top:165px;left:620px">
+    <div style="position: absolute;top:155px;left:75%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">舟山</div>
     </div>
-    <div style="position: absolute;top:290px;left:220px">
+    <div style="position: absolute;top:280px;left:26%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">衢州</div>
     </div>
-    <div style="position: absolute;top:260px;left:360px">
+    <div style="position: absolute;top:250px;left:45%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">金华</div>
     </div>
-    <div style="position: absolute;top:300px;left:530px">
+    <div style="position: absolute;top:290px;left:62%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">台州</div>
     </div>
-    <div style="position: absolute;top:370px;left:310px">
+    <div style="position: absolute;top:360px;left:38%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
     <div class="placeName">丽水</div>
     </div>
-    <div style="position: absolute;top:420px;left:410px">
+    <div style="position: absolute;top:410px;left:50%">
      <div class="mapCircleOut">
         <div class="mapCircleInner"></div>
     </div>
