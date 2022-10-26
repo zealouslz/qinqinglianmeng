@@ -27,18 +27,21 @@
         <a-date-picker placeholder="年/月/日" />
         <a-button icon="search" type="primary">搜索</a-button>
         <a-button class="resetButton">
-          <img src="../../image/reset.svg" /> <span>重置</span></a-button
+          <img src="../../image/reset.svg" /> <span style="margin-left:5px">重置</span></a-button
         >
       </div>
+      <br/>
+      <br/>
       <div class="newAdd"><a-icon type="plus" />新增</div>
       <a-table
         :columns="columns"
         :data-source="data"
-        :scroll="{ x: 1500, y: 400 }"
+        :scroll="{ x: 1500, y: 450 }"
+        :pagination="{ pageSize: 8 }"
       >
         <a slot="action" slot-scope="text">
-          <span>置顶</span> <span>编辑</span><span>详情</span>
-          <span>删除</span></a
+          <span >置顶</span> <span style="margin-left: 15px;">编辑</span><span style="margin-left: 15px;">详情</span>
+          <span style="margin-left: 15px;color: #FF3535;">删除</span></a
         >
       </a-table>
     </div>
@@ -46,43 +49,43 @@
 </template>
 
 <script>
-import headerBar from "../header/header.vue";
+import headerBar from '../header/header.vue'
 export default {
-  components: { headerBar, Map },
-  name: "list",
-  data() {
+  components: { headerBar },
+  name: 'list',
+  data () {
     return {
-      msg: "Welcome to Your Vue.js App",
+      msg: 'Welcome to Your Vue.js App',
       columns: [
-        { title: "序号", dataIndex: "serialNo", key: "serialNo" },
-        { title: "标题名称", dataIndex: "titleName", key: "titleName" },
-        { title: "创建时间", dataIndex: "createTime", key: "createTime" },
-        { title: "创建人", dataIndex: "creator", key: "2" },
+        { title: '序号', dataIndex: 'serialNo', key: 'serialNo' },
+        { title: '标题名称', dataIndex: 'titleName', key: 'titleName' },
+        { title: '创建时间', dataIndex: 'createTime', key: 'createTime' },
+        { title: '创建人', dataIndex: 'creator', key: '2' },
         {
-          title: "操 作",
-          key: "operation",
-          scopedSlots: { customRender: "action" },
-        },
+          title: '操 作',
+          key: 'operation',
+          scopedSlots: { customRender: 'action' }
+        }
       ],
-      data: [],
-    };
+      data: []
+    }
   },
-  mounted() {
-    this.init();
+  mounted () {
+    this.init()
   },
   methods: {
-    init() {
+    init () {
       for (let i = 0; i < 100; i++) {
         this.data.push({
           serialNo: i,
           titleName: `titleName ${i}`,
-          createTime: "2020/10/25",
-          creator: "zealous",
-        });
+          createTime: '2020/10/25',
+          creator: 'zealous'
+        })
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->

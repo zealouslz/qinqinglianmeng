@@ -105,9 +105,9 @@
   font-weight: 600;
   color: #FFFFFF;
   line-height: 20px;
-  background: #061733;
+  background: #5184b4;
   float: left;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .resetButton span {
   margin-left: 20px;
@@ -142,7 +142,7 @@
 }
  /deep/ .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
   position: relative;
-  background: rgba(96, 179, 255, 0.1);
+  background: rgba(96, 179, 255, 0);
   font-size: 14px;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -151,11 +151,52 @@
   letter-spacing: 1px;
 }
  /deep/ .ant-table-fixed-header .ant-table-scroll .ant-table-header {
-  margin-bottom: 10px!important;
-  padding-bottom: 0px!important;
-  overflow: hidden!important;
+  margin-bottom: 1px !important;
+  padding-bottom: 0px !important;
+  overflow: hidden !important;
   opacity: 0.9999;
 }
  /deep/ .ant-table-row {
   box-shadow: inset 0px 0px 4px 0px rgba(96, 179, 255, 0.7);
+}
+ /deep/ .ant-table-body > .ant-table-fixed {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+ /deep/ .ant-table-body {
+  overflow: hidden !important;
+}
+ /deep/ .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td,
+ /deep/ .ant-table-tbody .ant-table-row-hover,
+ /deep/ .ant-table-tbody .ant-table-row-hover > td {
+  background: none !important;
+}
+ /deep/ .ant-pagination-item {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 4px 0px rgba(49, 150, 244, 0.9);
+  border: 0px;
+  color: #FFFFFF;
+}
+ /deep/ .ant-pagination-item-link {
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFFFF;
+  border: 0px;
+  box-shadow: inset 0px 0px 4px 0px rgba(68, 163, 252, 0.9);
+}
+ /deep/ .ant-calendar-picker {
+  float: left;
+}
+ /deep/ .ant-pagination-item a {
+  color: #FFFFFF;
+}
+ /deep/ .ant-pagination-item-active {
+  background: #60B3FF;
+}
+ /deep/ .ant-pagination-item-ellipsis {
+  color: #FFFFFF !important;
+  border: 0px;
+  box-shadow: inset 0px 0px 4px 0px rgba(68, 163, 252, 0.9);
+}
+ /deep/ .ant-calendar-picker-icon {
+  color: white;
 }
