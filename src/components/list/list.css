@@ -123,3 +123,39 @@
   color: #60B3FF;
   line-height: 20px;
 }
+ /deep/ .ant-table-header {
+  background: rgba(96, 179, 255, 0.1);
+  box-shadow: inset 0px 0px 10px 0px rgba(96, 179, 255, 0.7);
+  border: 1px solid #60B3FF;
+}
+ /deep/ .ant-table-thead > tr > th {
+  background: rgba(0, 0, 0, 0);
+  font-size: 13px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 7px;
+  border-bottom: 0px;
+}
+ /deep/ .ant-table-tbody > tr > td {
+  border-bottom: 0px;
+}
+ /deep/ .ant-table-fixed-header > .ant-table-content > .ant-table-scroll > .ant-table-body {
+  position: relative;
+  background: rgba(96, 179, 255, 0.1);
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 10px;
+  letter-spacing: 1px;
+}
+ /deep/ .ant-table-fixed-header .ant-table-scroll .ant-table-header {
+  margin-bottom: 10px!important;
+  padding-bottom: 0px!important;
+  overflow: hidden!important;
+  opacity: 0.9999;
+}
+ /deep/ .ant-table-row {
+  box-shadow: inset 0px 0px 4px 0px rgba(96, 179, 255, 0.7);
+}
