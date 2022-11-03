@@ -18,12 +18,26 @@ export default new Router({
     {
       path: '/list',
       name: 'list',
-      component: () => import('@/components/list/list.vue')
+      component: () => import('@/components/list/list.vue'),
+      meta: {
+        keepAlive: true,
+      },
     },
     {
       path: '/newlyAdd',
       name: 'newlyAdd',
       component: () => import('@/components/newlyAdd/newlyAdd.vue')
+    }
+    ,
+    {
+      path: '/edit',
+      name: 'edit',
+      component: () => import('@/components/edit/edit.vue')
+    },
+    {
+      path: '/details',
+      name: 'details',
+      component: () => import('@/components/details/details.vue')
     }
   ]
 })

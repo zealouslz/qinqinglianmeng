@@ -20,7 +20,7 @@
         >
       </div>
       <div class="rectangle"></div>
-      <span class="headNav">{{ title + ">新增" }}</span>
+      <span class="headNav">{{ title + ">编辑" }}</span>
       <div class="divider" />
       <div style="padding: 10px 250px 0 250px">
         <a-row>
@@ -151,7 +151,7 @@ import api from "../../api/index";
 import url from "../../api/url/url";
 export default {
   components: { headerBar, editorVue },
-  name: "newlyAdd",
+  name: "edit",
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
@@ -174,22 +174,24 @@ export default {
       typeName: this.$route.params.cardList.typeAndItemList.typeName,
       typeId: this.$route.params.cardList.typeAndItemList.typeId,
       title: this.$route.params.cardList.title,
+      item: this.$route.params.item,
       dateFormat: "YYYY/MM/DD",
-      itemName: "",
-      itemId: "",
-      creatorId: "202210291",
-      creatorName: "zealous",
-      createDate: moment(moment().valueOf()).format("YYYY/MM/DD"),
+      itemName: this.$route.params.item.itemName,
+      itemId: this.$route.params.item.itemId,
+      creatorId: this.$route.params.item.creatorId,
+      creatorName: this.$route.params.item.creatorName,
+      createDate: this.$route.params.item.createDate,
       uploadData: {
         belongItemId: "",
       },
+
       action: "",
       headers: {
         // token: storage.get(ACCESS_TOKEN)
       },
       fileList: [],
       readOnlys: false,
-      content: "",
+      content: this.$route.params.item.htmlContent,
     };
   },
   mounted() {
@@ -197,7 +199,6 @@ export default {
   },
   methods: {
     init() {
-      this.itemId = uuidv4();
       this.uploadData.belongItemId = this.itemId;
       this.action = "/api/itemList/newAddFile";
     },
@@ -207,13 +208,8 @@ export default {
       } else {
         api
           .postRequest({
-            url: url.newAddItem,
+            url: url.updateItem,
             params: {
-              belongModular: this.modularId,
-              belongType: this.typeId,
-              createDate: moment().valueOf(),
-              creatorId: this.creatorId,
-              creatorName: this.creatorName,
               htmlContent: this.content,
               itemId: this.itemId,
               itemName: this.itemName,
@@ -221,7 +217,7 @@ export default {
           })
           .then((res) => {
             if (res.code == 200) {
-              this.$message.success("新增成功");
+              this.$message.success("修改成功！");
               this.goback();
             } else {
               this.$message.warning("新增失败！");
@@ -277,5 +273,5 @@ export default {
 
     <!-- Add "scoped" attribute to limit CSS to this component only -->
     <style scoped>
-@import url("./newlyAdd.css");
+@import url("./edit.css");
 </style>

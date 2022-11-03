@@ -121,3 +121,12 @@
   color: #FB1A1A;
   line-height: 25px;
 }
+ /deep/ .ant-upload-list-item-done {
+  color: #2dca6c;
+}
+ /deep/ .anticon-paper-clip {
+  color: inherit!important;
+}
+ /deep/ .ant-upload-list-item-done .ant-upload-list-item-card-actions .anticon {
+  color: red;
+}

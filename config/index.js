@@ -10,10 +10,17 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        // context: ['/system', 'dpsoi', '/doctor'], // context: () => true,
+        target: 'http://192.168.0.108:9527', // http://10.10.76.99:9527/
+        ws: true,
+        changeOrigin: true
+      },
+    },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '0.0.0.0', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

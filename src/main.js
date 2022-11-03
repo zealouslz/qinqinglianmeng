@@ -5,6 +5,7 @@ import Vue from 'vue'
 import Es6Promise from 'es6-promise'
 import Antd from 'ant-design-vue'
 import App from './App'
+import store from './store'
 import router from './router'
 import 'ant-design-vue/dist/antd.css'
 Es6Promise.polyfill()
@@ -14,6 +15,7 @@ Vue.use(Antd)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

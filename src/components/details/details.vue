@@ -2,7 +2,7 @@
   <div style="width: 100%; height: 100%; background: #061733">
     <headerBar></headerBar>
     <div class="body">
-      <div @click="handleCancle">
+      <div @click="goback">
         <img
           src="../../image/backIcon.svg"
           style="display: inline-block; float: left"
@@ -20,66 +20,39 @@
         >
       </div>
       <div class="rectangle"></div>
-      <span class="headNav">{{ title + ">新增" }}</span>
+      <span class="headNav">{{ title + ">详情" }}</span>
       <div class="divider" />
       <div style="padding: 10px 250px 0 250px">
         <a-row>
           <a-col :span="12">
             <div style="margin-bottom: 12px">
               <span class="itemName">所属模块：</span>
-              <a-select
-                placeholder="请选择"
-                v-model="modularName"
-                style="width: 70%"
-                disabled
-              >
-              </a-select>
+              <span class="itemConten">{{ modularName }}</span>
             </div>
           </a-col>
           <a-col :span="12">
             <div style="margin-bottom: 12px">
               <span class="itemName">廉盟类型：</span>
-              <a-select
-                placeholder="请选择"
-                style="width: 70%"
-                v-model="typeName"
-                disabled
-              >
-              </a-select>
+              <span class="itemConten">{{ typeName }}</span>
             </div>
           </a-col>
         </a-row>
         <a-row>
           <div style="margin-bottom: 12px">
             <span class="itemName">标题名称：</span>
-            <a-input
-              placeholder="请输入"
-              v-model="itemName"
-              style="width: 85%"
-            />
+            <span class="itemConten">{{ itemName }}</span>
           </div>
         </a-row>
         <a-row>
           <a-col :span="12">
             <div style="margin-bottom: 12px">
               <span class="itemName">创建时间：</span>
-              <a-date-picker
-                placeholder="年/月/日"
-                :format="dateFormat"
-                v-model="createDate"
-                disabled
-                style="width: 70%"
-              />
+              <span class="itemConten">{{ createDate }}</span>
             </div>
           </a-col>
           <a-col :span="12">
             <span class="itemName">&nbsp;&nbsp; 创建人：</span>
-            <a-input
-              placeholder="请输入"
-              v-model="creatorName"
-              disabled
-              style="width: 70%"
-            />
+            <span class="itemConten">{{ creatorName }}</span>
           </a-col>
         </a-row>
         <a-row>
@@ -126,17 +99,6 @@
             >
           </a-upload>
         </a-row>
-        <a-row>
-          <a-button key="back" @click="handleCancle"> 取消 </a-button>
-          <a-button
-            key="submit"
-            type="primary"
-            style="margin-left: 40px"
-            @click="handleOk"
-          >
-            确认
-          </a-button>
-        </a-row>
       </div>
     </div>
   </div>
@@ -151,7 +113,7 @@ import api from "../../api/index";
 import url from "../../api/url/url";
 export default {
   components: { headerBar, editorVue },
-  name: "newlyAdd",
+  name: "details",
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
@@ -174,22 +136,24 @@ export default {
       typeName: this.$route.params.cardList.typeAndItemList.typeName,
       typeId: this.$route.params.cardList.typeAndItemList.typeId,
       title: this.$route.params.cardList.title,
+      item: this.$route.params.item,
       dateFormat: "YYYY/MM/DD",
-      itemName: "",
-      itemId: "",
-      creatorId: "202210291",
-      creatorName: "zealous",
-      createDate: moment(moment().valueOf()).format("YYYY/MM/DD"),
+      itemName: this.$route.params.item.itemName,
+      itemId: this.$route.params.item.itemId,
+      creatorId: this.$route.params.item.creatorId,
+      creatorName: this.$route.params.item.creatorName,
+      createDate: this.$route.params.item.createDate,
       uploadData: {
         belongItemId: "",
       },
+
       action: "",
       headers: {
         // token: storage.get(ACCESS_TOKEN)
       },
       fileList: [],
-      readOnlys: false,
-      content: "",
+      readOnlys: true,
+      content: this.$route.params.item.htmlContent,
     };
   },
   mounted() {
@@ -197,37 +161,9 @@ export default {
   },
   methods: {
     init() {
-      this.itemId = uuidv4();
       this.uploadData.belongItemId = this.itemId;
       this.action = "/api/itemList/newAddFile";
-    },
-    handleOk() {
-      if (this.itemName == "") {
-        this.$message.warn("请输入标题！");
-      } else {
-        api
-          .postRequest({
-            url: url.newAddItem,
-            params: {
-              belongModular: this.modularId,
-              belongType: this.typeId,
-              createDate: moment().valueOf(),
-              creatorId: this.creatorId,
-              creatorName: this.creatorName,
-              htmlContent: this.content,
-              itemId: this.itemId,
-              itemName: this.itemName,
-            },
-          })
-          .then((res) => {
-            if (res.code == 200) {
-              this.$message.success("新增成功");
-              this.goback();
-            } else {
-              this.$message.warning("新增失败！");
-            }
-          });
-      }
+      // this.$refs.editorVue.readOnlys(true);
     },
     hChangeData(editDataHtml) {
       // 获取最新的html数据
@@ -255,15 +191,6 @@ export default {
         },
       });
     },
-    handleCancle() {
-      if (this.fileList.length > 0) {
-        api.postQueryRequest({
-          url: url.deleteByItemId,
-          params: { itemId: this.itemId },
-        });
-      }
-      this.goback();
-    },
     handleRemove(file) {
       console.log(file);
       // const index = this.fileList.indexOf(file);
@@ -277,5 +204,5 @@ export default {
 
     <!-- Add "scoped" attribute to limit CSS to this component only -->
     <style scoped>
-@import url("./newlyAdd.css");
+@import url("./details.css");
 </style>
