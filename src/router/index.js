@@ -20,15 +20,14 @@ export default new Router({
       name: 'list',
       component: () => import('@/components/list/list.vue'),
       meta: {
-        keepAlive: true,
-      },
+        keepAlive: true // true为需要缓存，false为不需要缓存（不需要的也可以不加）
+      }
     },
     {
       path: '/newlyAdd',
       name: 'newlyAdd',
       component: () => import('@/components/newlyAdd/newlyAdd.vue')
-    }
-    ,
+    },
     {
       path: '/edit',
       name: 'edit',

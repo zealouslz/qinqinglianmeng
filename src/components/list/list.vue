@@ -70,9 +70,6 @@
         >
       </a-table>
     </div>
-    <keep-alive include="list">
-      <router-view></router-view>
-    </keep-alive>
     <a-modal v-model="tipsVisible" title="提示" width="400px">
       <template>
         <div style="position: absolute; right: 0; top: 0">
@@ -159,132 +156,139 @@
 </template>
 
 <script>
-import headerBar from "../header/header.vue";
-import api from "../../api/index";
-import url from "../../api/url/url";
-import moment from "moment";
+import headerBar from '../header/header.vue'
+import api from '../../api/index'
+import url from '../../api/url/url'
+import moment from 'moment'
 export default {
   components: { headerBar },
-  name: "list",
-  data() {
+  name: 'list',
+  data () {
     return {
-      msg: "Welcome to Your Vue.js App",
+      msg: 'Welcome to Your Vue.js App',
       columns: [
-        { title: "序号", dataIndex: "serialNo", key: "serialNo" },
-        { title: "标题名称", dataIndex: "itemName", key: "titleName" },
-        { title: "创建时间", dataIndex: "createDate", key: "createTime" },
-        { title: "创建人", dataIndex: "creatorName", key: "2" },
+        { title: '序号', dataIndex: 'serialNo', key: 'serialNo' },
+        { title: '标题名称', dataIndex: 'itemName', key: 'titleName' },
+        { title: '创建时间', dataIndex: 'createDate', key: 'createTime' },
+        { title: '创建人', dataIndex: 'creatorName', key: '2' },
         {
-          title: "操 作",
-          key: "operation",
-          scopedSlots: { customRender: "action" },
-        },
+          title: '操 作',
+          key: 'operation',
+          scopedSlots: { customRender: 'action' }
+        }
       ],
       data: [],
       cardList: this.$route.params.cardList,
-      itemName: "",
-      date: "",
-      dateFormat: "YYYY/MM/DD",
+      itemName: '',
+      date: '',
+      dateFormat: 'YYYY/MM/DD',
       tipsVisible: false,
       deleteVisible: false,
-      selectItem: {},
-    };
+      selectItem: {}
+    }
   },
-  mounted() {
-    this.init();
+  mounted () {
+    this.init()
+  },
+  watch: {
+    $route (to, from) {
+      this.init()
+    }
   },
   methods: {
-    init() {
-      console.log("init");
-      this.getList();
+    init () {
+      console.log('init')
+      setTimeout(() => {
+        this.getList()
+      }, 100)
     },
-    getList() {
+    getList () {
       api
         .getRequest({
           url: url.searchList,
           params: {
             date:
-              this.date == "" ? "" : this.date.format("YYYY-MM-DD").toString(),
+              this.date == '' ? '' : this.date.format('YYYY-MM-DD').toString(),
             itemName: this.itemName,
             modualr: this.cardList.modular.modularId,
-            type: this.cardList.typeAndItemList.typeId,
-          },
+            type: this.cardList.typeAndItemList.typeId
+          }
         })
         .then((res) => {
-          this.data = res.data;
+          this.data = res.data
           this.data.forEach((element) => {
             element.createDate = moment(element.createDate)
-              .format("YYYY-MM-DD")
-              .toString();
-          });
-        });
+              .format('YYYY-MM-DD')
+              .toString()
+          })
+        })
     },
-    search() {
-      this.getList();
+    search () {
+      this.getList()
     },
-    goback() {
+    goback () {
       this.$router.push({
-        name: "bulletinBoard",
+        name: 'bulletinBoard'
         // params: { hzInfo: this.currentArg.event._def.extendedProps }
-      });
+      })
     },
-    newAdd() {
+    newAdd () {
       this.$router.push({
-        name: "newlyAdd",
+        name: 'newlyAdd',
         // params: { hzInfo: this.currentArg.event._def.extendedProps }
         params: {
-          cardList: this.cardList,
-        },
-      });
+          cardList: this.cardList
+        }
+      })
     },
-    setTopping() {
+    setTopping () {
       api
         .postRequest({
           url: url.setTopping,
-          params: this.selectItem,
+          params: this.selectItem
         })
         .then((res) => {
           if (res.code == 200) {
-            this.tipsVisible = false;
-            this.$message.success("置顶成功");
-            this.getList();
+            this.tipsVisible = false
+            this.$message.success('置顶成功')
+            this.getList()
           }
-        });
+        })
     },
-    deleteItem() {
+    deleteItem () {
       api
         .postRequest({
           url: url.deleteItem,
-          params: this.selectItem,
+          params: this.selectItem
         })
         .then((res) => {
           if (res.code == 200) {
-            this.deleteVisible = false;
-            this.$message.success("删除成功");
-            this.getList();
+            this.deleteVisible = false
+            this.$message.success('删除成功')
+            this.getList()
           }
-        });
+        })
     },
-    edit(item) {
+    edit (item) {
       this.$router.push({
-        name: "edit",
+        name: 'edit',
         params: {
           cardList: this.cardList,
-          item: item,
-        },
-      });
+          item: item
+        }
+      })
     },
-    details(item) {
+    details (item) {
       this.$router.push({
-        name: "details",
+        name: 'details',
         params: {
           cardList: this.cardList,
-          item: item,
-        },
-      });
-    },
-  },
-};
+          item: item
+        }
+      })
+    }
+  }
+}
 </script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->

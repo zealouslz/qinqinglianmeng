@@ -113,7 +113,7 @@ const vueConfig = {
     proxy: {
       '^/api': {
         // context: ['/system', 'dpsoi', '/doctor'], // context: () => true,
-        target: 'http://localhost:9527', // http://10.10.76.99:9527/
+        target: 'http://192.168.0.110:9527', // http://10.10.76.99:9527/
         ws: true,
         changeOrigin: true
       },
